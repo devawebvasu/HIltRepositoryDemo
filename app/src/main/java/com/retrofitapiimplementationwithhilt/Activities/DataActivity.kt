@@ -48,7 +48,8 @@ class DataActivity : AppCompatActivity() {
                     ?:run {
                       //  databaseModule.ProvidesDatabase(applicationContext).fakkerDao().InsertData(it.data)
                         dataAdapter.setList(databaseModule.ProvidesDatabase(this).fakkerDao().getAllData())
-                        Log.e(TAG, "onCreate:")
+
+
                     }
                 binding.list.adapter = dataAdapter
             }
