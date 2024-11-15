@@ -43,7 +43,7 @@ class MainActivity : AppCompatActivity() {
         databaseModule = DatabaseModule()
 
         itemAdapter = ItemAdapter(this, Itemlist)
-        Log.d("Item", itemAdapter.Itemlist.toString())
+        Log.d("Itemm", itemAdapter.Itemlist.toString())
         try {
             mainViewModel = ViewModelProvider(this).get(MainViewModel::class.java)
 
