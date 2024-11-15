@@ -24,6 +24,7 @@ class MainActivity : AppCompatActivity() {
 
     lateinit var mainViewModel: MainViewModel
 
+
     private lateinit var binding: ActivityMainBinding
     lateinit var fakerDB: FakerDB
     lateinit var itemAdapter: ItemAdapter
