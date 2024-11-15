@@ -24,8 +24,6 @@ class MainActivity : AppCompatActivity() {
 
     lateinit var mainViewModel: MainViewModel
 
-    //    val dataItem : TextView
-//    get() = findViewById(R.id.DataItem)
     private lateinit var binding: ActivityMainBinding
     lateinit var fakerDB: FakerDB
     lateinit var itemAdapter: ItemAdapter
@@ -45,7 +43,7 @@ class MainActivity : AppCompatActivity() {
         databaseModule = DatabaseModule()
 
         itemAdapter = ItemAdapter(this, Itemlist)
-        Log.d("Item", itemAdapter.Itemlist.toString())
+        Log.d("Items", itemAdapter.Itemlist.toString())
         try {
             mainViewModel = ViewModelProvider(this).get(MainViewModel::class.java)
 
