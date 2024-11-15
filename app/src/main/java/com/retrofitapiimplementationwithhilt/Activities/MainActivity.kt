@@ -24,7 +24,8 @@ class MainActivity : AppCompatActivity() {
 
     lateinit var mainViewModel: MainViewModel
 
-
+    //    val dataItem : TextView
+//    get() = findViewById(R.id.DataItem)
     private lateinit var binding: ActivityMainBinding
     lateinit var fakerDB: FakerDB
     lateinit var itemAdapter: ItemAdapter
