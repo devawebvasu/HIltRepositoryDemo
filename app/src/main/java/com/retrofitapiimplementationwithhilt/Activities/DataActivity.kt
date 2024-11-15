@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.retrofitapiimplementationwithhilt.Adapter.DataAdapter
 import com.retrofitapiimplementationwithhilt.Model.DataItem
 import com.retrofitapiimplementationwithhilt.Module.DatabaseModule
+import com.retrofitapiimplementationwithhilt.Repository.ItemRepository.Companion.TAG
 import com.retrofitapiimplementationwithhilt.ViewModel.MainViewModel
 import com.retrofitapiimplementationwithhilt.databinding.ActivityDataBinding
 import dagger.hilt.android.AndroidEntryPoint
@@ -47,6 +48,7 @@ class DataActivity : AppCompatActivity() {
                     ?:run {
                       //  databaseModule.ProvidesDatabase(applicationContext).fakkerDao().InsertData(it.data)
                         dataAdapter.setList(databaseModule.ProvidesDatabase(this).fakkerDao().getAllData())
+                        Log.e(TAG, "onCreate:")
                     }
                 binding.list.adapter = dataAdapter
             }
