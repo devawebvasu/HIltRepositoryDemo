@@ -35,6 +35,7 @@ class DataActivity : AppCompatActivity() {
         dataAdapter = DataAdapter(this,dataList)
 
         try {
+            Log.e(TAG, "onCreate: ")
             mainViewModel = ViewModelProvider(this).get(MainViewModel::class.java)
             mainViewModel.productLiveData.observe(this) {
                 it?.let {
