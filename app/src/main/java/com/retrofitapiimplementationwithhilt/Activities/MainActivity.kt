@@ -43,7 +43,7 @@ class MainActivity : AppCompatActivity() {
         databaseModule = DatabaseModule()
 
         itemAdapter = ItemAdapter(this, Itemlist)
-        Log.d("Items", itemAdapter.Itemlist.toString())
+        Log.d("Item", itemAdapter.Itemlist.toString())
         try {
             mainViewModel = ViewModelProvider(this).get(MainViewModel::class.java)
 
@@ -52,6 +52,7 @@ class MainActivity : AppCompatActivity() {
                     Log.d("data", it.toString())
                     databaseModule.ProvidesDatabase(this).fakkerDao().InsertApp(it!!.appCenter!![0]!!.subCategory)
                     try {
+
                         itemAdapter.setList(it!!.appCenter!![0]!!.subCategory)
                     } catch (e: Exception) {
                         e.printStackTrace()
